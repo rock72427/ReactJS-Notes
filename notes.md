@@ -65,3 +65,15 @@ npm uninstall <packageName>
 ```
 npx <packageName>
 ```
+
+## Creating a React Application
+
+1. using create-react-app (CRA)
+
+- install nodejs
+- install react globally in the system
+  > npm i -g react
+
+### Steps
+
+1. npx create-react-app projectname
