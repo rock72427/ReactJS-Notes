@@ -15,7 +15,7 @@ Pre requisite to leran react:
 
 ## Features of ReactJS
 
-1. Single Page Application(SPA)
+1. Single Page Application (SPA)
 2. Reusable Components
 3. Fast Performance (Virtual DOM)
 4. Scalability (can redude large Apps)
@@ -24,3 +24,44 @@ Pre requisite to leran react:
 7. Data binding (easy to manupulate data)
 8. Big Community (large no. of Developers worldwide)
 9. Easy to learn
+
+## History of ReactJS
+
+- ReactJS was developed by Jordan Walke, a software engineer working for Facebook. In 2011
+- The fast implementation of react was in the facebook news feeds in the year of 2011, later in 2012 they implement the react in instagram.
+- In 2013 JS conference US react become open-source.
+- The current version ongoing version of react is 18.3V.
+- The biggest update of react introduced in 16.8V which allowed the developer to use more functional oriented components.
+- In 16.8V hooks concept introduced.
+
+## NodeJS
+
+- NodeJS is a software environment which allows us to run the javascript code outside of the web browser.
+
+## NPM (node package manager)
+
+- NPM stands for node package manager.
+- It is a software registery which store all the javascript libray and packages.
+- It is a online storage platform with more then 2 million of javascript packages.
+
+#### To install
+
+```
+npm install <packageName>
+npm i <packageName>
+```
+
+#### To uninstall
+
+```
+npm uninstall <packageName>
+```
+
+## NPX
+
+- NPX stands for node package execute.
+- NPX is a command use to execute javascript packages without installing them.
+
+```
+npx <packageName>
+```
