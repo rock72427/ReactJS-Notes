@@ -123,15 +123,15 @@ npx <packageName>
 
 - This library provide the commands to start, build and test the application.
 
-### 4. eslint
+### \*4. eslint
 
 - eslint library is use the handle the errors inside the application and maintains the code standard.
 
-### 5. webpack
+### \*5. webpack
 
 - Webpack is a moudle bundler library its main purpose is to bundle all the javascript files into a single file before given to the browser.
 
-### 6. Babel
+### \*6. Babel
 
 - Babel is a javascript compiler library which use to convert the modern javascript code into browser understanding code.
 - This is the library which is helping us to write jsx syntax inside a react component.
