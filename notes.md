@@ -77,3 +77,37 @@ npx <packageName>
 ### Steps
 
 1. npx create-react-app projectname
+2. Move to the Project Folder
+   > cd projectname
+3. Run the Application
+   > npm start
+
+## Folder Structure of a React Application
+
+### 1. node_modules
+
+- node_modules folder stores all the third party libraries and packages which are use inside the react application.
+
+### 2. public
+
+- public folder stores all the static files of the application.
+- Inside public folder index.html file is presented which is the main html file of the react application.
+- This is the only page which will load inside browser (this is known as single page).
+
+### 3. src
+
+- src is the folder where the developer's are going to write source code of the react application.
+- Inside src index.js file is presented which is the root javascript file and app.js which is the root react file of the react application.
+
+### 4. .gitignore
+
+- This file is use to prevent pushing unwanted files to the github.
+
+### 5. package.json
+
+- This file store the information about the project and its dependencies packages.
+- This file also store the scripting commands to run, build, test the application.
+
+### 6. package-lock.json
+
+- This file stores depth information about all the dependencies packages installed in our application.
