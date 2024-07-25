@@ -111,3 +111,35 @@ npx <packageName>
 ### 6. package-lock.json
 
 - This file stores depth information about all the dependencies packages installed in our application.
+
+## Libraries used inside a React Application
+
+### 2. react-dom
+
+- react-dom library manages every dom manupulation inside the react app.
+- Before sending the DOM changes to browser react DOM library verify it which is known as virtual DOM.
+
+### 3. react-scripts
+
+- This library provide the commands to start, build and test the application.
+
+### 4. eslint
+
+- eslint library is use the handle the errors inside the application and maintains the code standard.
+
+### 5. webpack
+
+- Webpack is a moudle bundler library its main purpose is to bundle all the javascript files into a single file before given to the browser.
+
+### 6. Babel
+
+- Babel is a javascript compiler library which use to convert the modern javascript code into browser understanding code.
+- This is the library which is helping us to write jsx syntax inside a react component.
+
+### 7. webvitals
+
+- This library use to measure the performace of an application.
+
+### 8. jest
+
+- This library is use for unit testing purpose of the react application.
