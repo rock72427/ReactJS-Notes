@@ -143,3 +143,108 @@ npx <packageName>
 ### 8. jest
 
 - This library is use for unit testing purpose of the react application.
+
+## JSX
+
+- JSX is stands for javascript extention or javascript XML.
+- JSX allows the developer's to write HTML like syntax in a React component.
+- JSX is not mandatory but it is the easiest way to embbed HTML elements in React application.
+
+### Rules of JSX
+
+- All the components inside JSX should starts with upper case.
+- If a components is returning multiple JSX elements we should wrap them inside a single parent element.
+
+```
+function App() {
+   return (
+      <div>
+         <h1>This is app compoenent</h1>
+         <First></First>
+         <b>Component Ends</b>
+      </div>
+   )
+}
+```
+
+- Every tags are paired tags or closing tags inside JSX.
+
+```
+const First = () => {
+   let msg = "Hello World";
+   return (
+      <div>
+         <h1>This is first component</h1>
+      ❌<br>
+      ✅<br />
+      ✅<br></br>
+
+         {100 + 100}
+         <h1>{msg}</h1>
+         {console.log("hi from jsx")}
+
+      ❌{for (let i = 0; i <= 5; i++) {
+               console.log(i);
+         }}
+
+      ❌{if(10 > 5) {
+            <h1>10 is greater</h1>
+         }}
+
+      ✅{10 > 5 ? <h1>10 is greater</h1>: <h1>10 is smaller</h1>}
+      </div>
+   )
+}
+```
+
+- We can write javascript inside JSX using curly braces.
+- We cannot write any types of looping statements inside JSX.
+- We cannot write any conditional statements inside JSX, for conditions we can use ternary operator's.
+- We can write JSX inside the conditional statements or looping statements.
+
+```
+const First = () => {
+   if (10 > 5) {
+      return <h1>{10} is greater</h1>
+   } else {
+      return <h1>{5 + 5} is smaller</h1>
+   }
+}
+```
+
+- Attributes like class changes to className and for changes to htmlFor.
+
+```
+const First = () => {
+   return (
+      <div>
+         <h1 className="heading">Hello</h1>
+         <label htmlFor="username">Username:</label>
+         <input type="text" id="username" />
+      </div>
+   )
+}
+```
+
+- Every event's inside JSX are synthetic event's (inline event's) and convert to camel cases
+
+```
+onclick => onClick
+onchange => onChange
+onsubmit => onSubmit
+onkeypress => onKeyPress
+```
+
+```
+const First = () => {
+   function buttonClick() {
+      console.log("Button Clicked")
+   }
+   return (
+      <div>
+         <h1>EVENTS</h1>
+         <button onClick={buttonClick}>Click Here</button>
+      </div>
+   )
+}
+```
