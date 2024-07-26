@@ -1,10 +1,11 @@
 import React from "react";
-import FirstApp from "./FirstApp";
+import First from "./First";
 
 const App = () => {
   return (
     <div>
-      <FirstApp />
+      <h1>React App</h1>
+      <First />
     </div>
   );
 };
