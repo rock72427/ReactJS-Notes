@@ -248,3 +248,55 @@ const First = () => {
    )
 }
 ```
+
+## Components
+
+- Components are basic building block's of an react application.
+- Components are similar to javascript function or classes which returns some DOM elements or JSX elements.
+- Components are independent and can be reuse multiple times.
+- There are 2 types of component in react application:
+
+1. Function Based Components
+2. Class Based Components
+
+### Function Based Components
+
+- The components which are created by using javascript function creation method are known as function based components.
+
+```
+function First() {
+   return (
+      <div>
+         <h1>This is First Components</h1>
+      </div>
+   )
+}
+export default First
+```
+
+### Class Based Components
+
+- The components which are created by using javascript class syntax are known as class based components.
+- Every class components should inherit the properties and methods from a parent class React.Component.
+- All the class based components are attached with inbuild method and functionalities.
+- To return some JSX from a class based components we have to use render method.
+
+```
+import React from 'react'
+
+class Third extends React.Component {
+   constructor() {
+      super()
+      this.msg = "It's a class component"
+   }
+   render() {
+      return (
+         <div>
+            <h1>{this.msg}</h1>
+         </div>
+      )
+   }
+}
+
+export default Third
+```
