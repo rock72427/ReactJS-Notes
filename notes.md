@@ -315,7 +315,9 @@ export default Third
 <Component key={value} />
 ```
 
-### App.js
+## Props in a Class Based Component
+
+#### App.js
 
 ```
 import React from "react";
@@ -334,7 +336,7 @@ const App = () => {
 export default App;
 ```
 
-### Third.js
+#### Third.js
 
 ```
 import React from "react";
@@ -359,4 +361,78 @@ class Third extends React.Component {
 export default Third;
 ```
 
-### Using Props in a Class Based Component
+## Props in a Function Based Component
+
+#### App.js
+
+```
+import React from "react";
+import First from "./First";
+
+const App = () => {
+  let msg = "Good Afternoon";
+  return (
+    <div>
+      <h1>React App</h1>
+      <First name={"Virat"} address={"Delhi"} age={35} />
+    </div>
+  );
+};
+
+export default App;
+```
+
+#### First.js
+
+```
+import React from "react";
+
+const First = (props) => {
+  console.log(props);
+  const { name, address, age } = props;
+  return (
+    <div>
+      <h1>This is Function Component</h1>
+      <h1>Name = {name}</h1>
+      <h1>Address = {address}</h1>
+      <h1>Age = {age}</h1>
+    </div>
+  );
+};
+
+export default First;
+```
+
+## OR
+
+#### First.js
+
+```
+import React from "react";
+
+const First = ({ name, address, age }) => {
+  return (
+    <div>
+      <h1>This is Function Component</h1>
+      <h1>Name = {name}</h1>
+      <h1>Address = {address}</h1>
+      <h1>Age = {age}</h1>
+    </div>
+  );
+};
+
+export default First;
+```
+
+## Children Props
+
+- The data (or) information which passed in between the component opening and closing tags is called as children props.
+- That data implicitly added to a properly named as children inside the props object.
+
+#### Example
+
+```
+<Component>
+   {data}
+</Component>
+```
