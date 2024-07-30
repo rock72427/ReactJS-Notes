@@ -1,13 +1,12 @@
 import React from "react";
-import First from "./First";
 import Third from "./Third";
 
 const App = () => {
+  let msg = "Good Afternoon";
   return (
     <div>
       <h1>React App</h1>
-      {/* <First /> */}
-      <Third />
+      <Third name="Rocky" age={25} msg={msg} />
     </div>
   );
 };

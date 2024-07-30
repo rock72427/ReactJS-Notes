@@ -300,3 +300,63 @@ class Third extends React.Component {
 
 export default Third
 ```
+
+## Props (properties)
+
+- Props is an inbuild object inside react components.
+- Props are the data which send from a parent component to child component.
+- Props are send in a similar way like function arguments (or) HTML attributes
+- Props are immutable as they are the data recieved from parent component.
+- Props are passed as a key-value pair.
+
+#### Example
+
+```
+<Component key={value} />
+```
+
+### App.js
+
+```
+import React from "react";
+import Third from "./Third";
+
+const App = () => {
+  let msg = "Good Afternoon";
+  return (
+    <div>
+      <h1>React App</h1>
+      <Third name="Rocky" age={25} msg={msg} />
+    </div>
+  );
+};
+
+export default App;
+```
+
+### Third.js
+
+```
+import React from "react";
+
+class Third extends React.Component {
+  constructor() {
+    super();
+    this.msg = "It's a class component";
+  }
+  render() {
+    console.log(this.props);
+    return (
+      <div>
+        <h1>Name = {this.props.name}</h1>
+        <h1>Age = {this.props.age}</h1>
+        <h1>Msg = {this.props.msg}</h1>
+      </div>
+    );
+  }
+}
+
+export default Third;
+```
+
+### Using Props in a Class Based Component
