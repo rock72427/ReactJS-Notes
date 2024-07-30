@@ -1,5 +1,4 @@
 import React from "react";
-import Third from "./Third";
 import First from "./First";
 
 const App = () => {
@@ -7,9 +6,10 @@ const App = () => {
   return (
     <div>
       <h1>React App</h1>
-      <Third name={"Rocky"} age={25} msg={msg} />
-
-      <First name={"Virat"} address={"Delhi"} age={35} />
+      <First>
+        {"Hello Jspider"} <br />
+        {"Welcome to the React Class"}
+      </First>
     </div>
   );
 };

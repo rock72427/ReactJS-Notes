@@ -436,3 +436,44 @@ export default First;
    {data}
 </Component>
 ```
+
+#### App.js
+
+```
+import React from "react";
+import First from "./First";
+
+const App = () => {
+  let msg = "Good Afternoon";
+  return (
+    <div>
+      <h1>React App</h1>
+      <First>
+        {"Hello Jspider"} <br />
+        {"Welcome to the React Class"}
+      </First>
+    </div>
+  );
+};
+
+export default App;
+```
+
+#### First.js
+
+```
+import React from "react";
+
+const First = ({ children }) => {
+  return (
+    <div>
+      <h1>This is Function Component</h1>
+      <h1>{children}</h1>
+    </div>
+  );
+};
+
+export default First;
+```
+
+## Q. Difference between library and framework
