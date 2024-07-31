@@ -526,3 +526,44 @@ Here are the key differences between libraries and frameworks:
 - a react application followsthe architecture of one way data binding that means we can only send the data from a parent component to child component.
 - There is no predefined method or properties by which we can send the data
   from child component to parent component, but we can use our own custom methods as a callback function through which we can send data from child to parent component.
+
+#### App.js
+
+```
+import Child from "./Child";
+
+function App() {
+  const getAddress = (data) => {
+    console.log(data);
+  };
+  return (
+    <div>
+      <Child name="Rinku Singh" getAddress={getAddress} />
+    </div>
+  );
+}
+
+export default App;
+```
+
+#### Child.js
+
+```
+import React from "react";
+
+function Child({ name, getAddress }) {
+  let address = "UP";
+  function handleClick() {
+    getAddress(address);
+  }
+  return (
+    <div>
+      <h1>Child Component</h1>
+      <button onClick={handleClick}>Send Data</button>
+      <b>{name}</b>
+    </div>
+  );
+}
+
+export default Child;
+```

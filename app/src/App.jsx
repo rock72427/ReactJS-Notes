@@ -1,17 +1,14 @@
-import React from "react";
-import First from "./First";
+import Child from "./Child";
 
-const App = () => {
-  let msg = "Good Afternoon";
+function App() {
+  const getAddress = (data) => {
+    console.log(data);
+  };
   return (
     <div>
-      <h1>React App</h1>
-      <First>
-        {"Hello Jspider"} <br />
-        {"Welcome to the React Class"}
-      </First>
+      <Child name="Rinku Singh" getAddress={getAddress} />
     </div>
   );
-};
+}
 
 export default App;
