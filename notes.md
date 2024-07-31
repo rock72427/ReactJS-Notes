@@ -476,4 +476,53 @@ const First = ({ children }) => {
 export default First;
 ```
 
-## Q. Difference between library and framework
+## Q. Difference between library and framework?
+
+### Library
+
+- A library is a collection of reusable code that provides a specific functionality or set of functionalities.
+- Libraries are typically used to perform a specific task, such as data encryption, compression, or networking.
+- When using a library, the developer is in control of the application's flow and decides when to call the library's functions.
+
+### Framework
+
+- A framework, on the other hand, is a more comprehensive structure that provides a set of pre-defined components, tools, and rules to build an application.
+- Frameworks often dictate the application's architecture and provide a set of guidelines for development. When using a framework, the developer must adhere to its rules and guidelines to build the application.
+
+### Key differences
+
+Here are the key differences between libraries and frameworks:
+
+#### Control:
+
+- When using a library, the developer is in control of the application's flow.
+- When using a framework, the framework dictates the application's architecture and flow.
+
+#### Scope:
+
+- Libraries are typically used to perform a specific task, while frameworks provide a comprehensive structure for building an application.
+
+#### Customization:
+
+- Libraries can be easily customized to fit the developer's needs, while frameworks often require more effort to customize.
+
+## Props Drilling
+
+![props drilling](https://i.ibb.co/1ryK8Kj/2024-07-31-16-31-20-AI-Eraser.png)
+
+- Sending the data from top most parent component to least most child component as a props known as props drilling.
+
+### Advantage
+
+- If every connected component need same data then we can create the data in top most parent component and pass that one as a props to each connected children component.
+
+### Disadvantage
+
+- If any one of the component does not need that data still it have to recive and pass the data to its child component as a props.
+- If any changes made in the parent data every connected child components will re-render in the web page this process can decrease the performance of react aplication.
+
+## One Way Data Binding
+
+- a react application followsthe architecture of one way data binding that means we can only send the data from a parent component to child component.
+- There is no predefined method or properties by which we can send the data
+  from child component to parent component, but we can use our own custom methods as a callback function through which we can send data from child to parent component.
