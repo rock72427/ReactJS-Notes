@@ -1,14 +1,13 @@
+import React from "react";
+import "./App.css";
 import Child from "./Child";
 
-function App() {
-  const getAddress = (data) => {
-    console.log(data);
-  };
+const App = () => {
   return (
     <div>
-      <Child name="Rinku Singh" getAddress={getAddress} />
+      <Child />
     </div>
   );
-}
+};
 
 export default App;

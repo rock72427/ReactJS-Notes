@@ -567,3 +567,117 @@ function Child({ name, getAddress }) {
 
 export default Child;
 ```
+
+#### Inline css in ReactJS
+
+```
+import React from "react";
+
+const Child = () => {
+  let myStyle = {
+    color: "red",
+    backgroundColor: "#000",
+    fontSize: "30px",
+    padding: "20px 30px",
+    border: "1px solid #fff",
+    margin: "0px",
+  };
+  return (
+    <>
+      <h1
+        style={{
+          color: "red",
+          backgroundColor: "#000",
+          fontSize: "30px",
+          padding: "20px 30px",
+          border: "1px solid #fff",
+          margin: "0px",
+        }}
+      >
+        Heading
+      </h1>
+      <p style={myStyle}>Section</p>
+    </>
+  );
+};
+
+export default Child;
+```
+
+#### External css in ReactJS
+
+#### App.js
+
+```
+import React from "react";
+import "./App.css";
+import Child from "./Child";
+
+const App = () => {
+  return (
+    <div>
+      <Child />
+    </div>
+  );
+};
+
+export default App;
+```
+
+#### App.css
+
+```
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.container {
+  width: 80%;
+  margin: auto;
+}
+#heading {
+  background: coral;
+  color: #fff;
+  padding: 10px 0px;
+}
+.section {
+  line-height: 35px;
+}
+```
+
+#### Child.jsx
+
+```
+import React from "react";
+
+const Child = () => {
+  return (
+    <>
+      <h1 id="heading">
+        <div className="container">Heading</div>
+      </h1>
+      <div className="container">
+        <p className="section">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex
+          voluptatum iure commodi ratione architecto! Dignissimos reiciendis quo
+          sit dolorum alias illum officiis atque, quia quod rem distinctio eum,
+          dolores optio. Cum molestiae voluptate quos non vero, laborum et
+          debitis necessitatibus alias possimus expedita aut? Ut ipsa quisquam
+          vitae eum culpa sequi explicabo tenetur, dolorem optio consequuntur
+          placeat architecto excepturi odio. Nihil, itaque ut ipsam ducimus
+          consectetur mollitia. Ipsum impedit consequuntur vel quod temporibus
+          natus, reiciendis cum non quidem, nihil illo ad exercitationem magni
+          nemo ipsa aperiam nam. Quo, impedit explicabo? Doloribus ut temporibus
+          deserunt? Praesentium eligendi reprehenderit aliquam veritatis
+          explicabo ipsa quidem dolorum mollitia sapiente delectus ab magnam
+          sint, officiis suscipit architecto illum tempore corrupti repellendus
+          illo ex labore. Consequatur.
+        </p>
+      </div>
+    </>
+  );
+};
+
+export default Child;
+```
