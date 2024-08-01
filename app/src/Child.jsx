@@ -1,19 +1,34 @@
 import React from "react";
 
 const Child = () => {
-  let fruits = ["mango", "grapes", "apple", "banana", "orange"];
-  let displayFruits = [];
-  for (let fruit of fruits) {
-    displayFruits.push(<li>{fruit}</li>);
+  let student = {
+    name: "Rocky",
+    age: 24,
+    address: "KGF",
+    email: "rockybhai@gmail.com",
+  };
+  let displayStudent = [];
+  for (let key in student) {
+    displayStudent.push(
+      <h1>
+        {key}: {student[key]}
+      </h1>
+    );
   }
+
   return (
     <div>
-      <ol>
-        {fruits.map((fruit, index) => {
-          return <li>{fruit}</li>;
-        })}
-      </ol>
-      {displayFruits}
+      {displayStudent}
+      ---------------------
+      {/* {console.log(Object.keys(student))} */}
+      {/* {console.log(Object.values(student))} */}
+      {Object.keys(student).map((element) => {
+        return (
+          <h1>
+            {element}: {student[element]}
+          </h1>
+        );
+      })}
     </div>
   );
 };
