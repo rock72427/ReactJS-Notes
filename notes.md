@@ -681,3 +681,50 @@ const Child = () => {
 
 export default Child;
 ```
+
+```
+import React from "react";
+import Image from "./img.jpg";
+
+const Child = () => {
+  return (
+    <>
+      <div style={{ display: "flex" }}>
+        <img
+          src="https://assets.promptbase.com/DALLE_IMAGES%2FQyoCIEAadSVXpsO0KGYsgzKu4lp2%2Fresized%2F1688409888663_w_800x800.webp?alt=media&token=e18085c6-e963-4145-9c60-7d398e7cadea"
+          alt="Image"
+          height={"737px"}
+        />
+        <img src={Image} alt="Image" height={"737px"} />
+        {/* <img src="/img.jpg" alt="Image" height={"737px"} /> */}
+      </div>
+    </>
+  );
+};
+
+export default Child;
+```
+
+```
+import React from "react";
+
+const Child = () => {
+  let fruits = ["mango", "grapes", "apple", "banana", "orange"];
+  let displayFruits = [];
+  for (let fruit of fruits) {
+    displayFruits.push(<li>{fruit}</li>);
+  }
+  return (
+    <div>
+      <ol>
+        {fruits.map((fruit, index) => {
+          return <li>{fruit}</li>;
+        })}
+      </ol>
+      {displayFruits}
+    </div>
+  );
+};
+
+export default Child;
+```
