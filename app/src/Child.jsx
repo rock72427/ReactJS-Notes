@@ -22,10 +22,10 @@ const Child = () => {
       ---------------------
       {/* {console.log(Object.keys(student))} */}
       {/* {console.log(Object.values(student))} */}
-      {Object.keys(student).map((element) => {
+      {Object.keys(student).map((key) => {
         return (
           <h1>
-            {element}: {student[element]}
+            {key}: {student[key]}
           </h1>
         );
       })}

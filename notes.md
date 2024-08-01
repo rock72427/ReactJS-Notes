@@ -761,7 +761,7 @@ const Child = () => {
       {Object.keys(student).map((element) => {
         return (
           <h1>
-            {element}: {student[element]}
+            {key}: {student[key]}
           </h1>
         );
       })}
