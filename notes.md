@@ -794,6 +794,29 @@ this.state = {count: 0}
 
 - To modify the state value we are using an in-build method `this.setState()`.
 
+### State in a Function Based Component
+
+- State is not an in-build property in function based component that's why those are known as stateless component.
+- To use a state inside function component we have to depend on a `hook` named as `useState()`.
+  > ### Note
+  >
+  > > ### Hook
+  > >
+  > > Hooks are nothing but some predefined methods introduced in React 16.8 version to achive the in-build features in funciton based component.
+
+#### Syntax
+
+```
+const [state, setState] = useState(initialValue)
+// setState => function to update the state
+```
+
+#### Example
+
+```
+const [count, setCount] = useState(0);
+```
+
 #### App.js
 
 ```
@@ -850,9 +873,16 @@ class ClassComponent extends Component {
     };
   }
 
-  handelClick = () => {
+  increment = () => {
     this.setState({
       count: this.state.count + 1,
+    }); // async
+    console.log(this.state.count); // previous value
+  };
+
+  decrement = () => {
+    this.setState({
+      count: this.state.count - 1,
     }); // async
     console.log(this.state.count); // previous value
   };
@@ -862,10 +892,22 @@ class ClassComponent extends Component {
       <div>
         <h1>Class Component</h1>
         <h1>{this.state.count}</h1>
-        <button onClick={this.handelClick}>Increment</button>
+        <button onClick={this.decrement}>Decrement</button>
+        <button onClick={this.increment}>Increment</button>
       </div>
     );
   }
 }
 export default ClassComponent;
+
 ```
+
+# Interview Question
+
+## Q1. What is the difference between state and props?
+
+## Q2. Difference between classbased compnent and functionbased component?
+
+## Q3. Difference between controlled component and uncontrolled component?
+
+## Q4. What is hooks in react and what are the rule of using a hook?
