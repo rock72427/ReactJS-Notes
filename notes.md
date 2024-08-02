@@ -771,3 +771,101 @@ const Child = () => {
 
 export default Child;
 ```
+
+## State
+
+- State is an in-built property in react component(class based component).
+- State is component own data.
+- State is mutable.
+- State is use to perform any dynamic changes inside a component to manage the DOM manupulation in a react application.
+- Any updation in state value re-render the component.
+- State manages the life cycle of a component from creating to destroying.
+
+### State in a Class Based Component
+
+- State is an in-build property inside class based component that's why they are known as statefull component.
+- to create a state value we have to use `this.state` property inside the constructor function.
+
+#### Example
+
+```
+this.state = {count: 0}
+```
+
+- To modify the state value we are using an in-build method `this.setState()`.
+
+#### App.js
+
+```
+import React from "react";
+import FunctionComponent from "./Function";
+import ClassComponent from "./Class";
+
+const App = () => {
+  return (
+    <div>
+      <FunctionComponent />
+      <ClassComponent />
+    </div>
+  );
+};
+
+export default App;
+```
+
+#### Function.js
+
+```
+import { useState } from "react";
+
+function FunctionComponent() {
+  const [count, setCount] = useState(0);
+
+  function handleClick() {
+    setCount(count + 1);
+  }
+
+  return (
+    <div>
+      <h1>Function Component</h1>
+      <h1>{count}</h1>
+      <button onClick={handleClick}>Increment</button>
+    </div>
+  );
+}
+
+export default FunctionComponent;
+```
+
+#### Class.js
+
+```
+import { Component } from "react";
+
+class ClassComponent extends Component {
+  constructor() {
+    super();
+    this.state = {
+      count: 0,
+    };
+  }
+
+  handelClick = () => {
+    this.setState({
+      count: this.state.count + 1,
+    }); // async
+    console.log(this.state.count); // previous value
+  };
+  render() {
+    console.log("render", this.state.count);
+    return (
+      <div>
+        <h1>Class Component</h1>
+        <h1>{this.state.count}</h1>
+        <button onClick={this.handelClick}>Increment</button>
+      </div>
+    );
+  }
+}
+export default ClassComponent;
+```

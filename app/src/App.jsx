@@ -1,11 +1,12 @@
 import React from "react";
-import "./App.css";
-import Child from "./Child";
+import FunctionComponent from "./Function";
+import ClassComponent from "./Class";
 
 const App = () => {
   return (
     <div>
-      <Child />
+      <FunctionComponent />
+      <ClassComponent />
     </div>
   );
 };
