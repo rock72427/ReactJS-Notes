@@ -906,8 +906,130 @@ export default ClassComponent;
 
 ## Q1. What is the difference between state and props?
 
+- In React, props and state are essential concepts for manageing data an passing information between components.
+- Understanding the differences and use cases for each is curcial for building robust and maintainable applications.
+
+### Props(Properties)
+
+- `Definition`: Props are read-only data that are passed from a parent component to a child component. They allow components to be customizable and reusable.
+- `Usage`: Props are used to transmit data from a parent component to a child component.
+- `Passing Props`: Props are passed as attributes to a component in JSX.
+- `Accessing Props`: Inside the child component, props are accessed via the `props` object.
+
+### State
+
+- `Definition`: State represents the internal data of a component that can change over time. It allows components to manage thier own data.
+- `Usage`: State is used for data that can change within a component and triggers re-rendering when updated.
+- `Initializaing State`: State is initialized using the `useState` hook.
+
+- `Updating State`: State should never be modified directly. Instead, use the setter function provided by the hook to update state.
+
+### Props vs State
+
+#### Props:
+
+- Immutable (read-only).
+- Passed from parent or child.
+- Used for configuring child components.
+
+#### State:
+
+- Mutable (can be updated).
+- Managed within a component.
+- Used for managing internal component data.
+
 ## Q2. Difference between classbased compnent and functionbased component?
+
+### Functional
+
+```
+function Welcome(props) {
+  return <h1>Hello, {props.name}</h1>;
+}
+```
+
+- A functional component is just a plain Javascript pure function that accepts props as an argument and returns a React element.
+- There is no render method used in functional components.
+- Also known as Stateless components as they simply accept data and display them in some form, they are mainly responsible for rendering UI.
+
+```
+const [name, setName] = React.useState(' ');
+```
+
+- Hooks can be easily used in functional components to make them stateful.
+- Functional components are simpler and faster.
+
+### Class Component
+
+```
+class DemoComponent extends React.Component {
+  render() {
+    return <h1>Welcome Message!</h1>;
+  }
+}
+```
+
+- A class component require you to extend from React.Component and create a render function that returns a React element.
+- It must have the render method returning JSX.
+
+```
+class Welcome extends React.Component {
+  // this is a statefull component
+  constructor(props) {
+    super(props);
+    this.state = {name: 'John Doe'};
+  }
+  render() {
+    return <h1>Hello, {this.state.name}</h1>;
+  }
+}
+```
+
+- Also known as Stateful components because they implement logic ans state.
+
+```
+constructor(props) {
+  super(props);
+  this.state = {name: ' '}
+}
+```
+
+- It require different syntax inside a class component to implement hooks.
+- Class components are more feature-rich and reusable.
 
 ## Q3. Difference between controlled component and uncontrolled component?
 
 ## Q4. What is hooks in react and what are the rule of using a hook?
+
+- Hooks are the new feature introduced in the React 16.8 version.
+- It allows you to use state and other React features without writing a class.
+- Hooks are the functions which "hook into" React state and lifecycle features from function components.
+- It does not work inside classes.
+
+- There are 3 rules for hooks
+
+### 1. Only use hooks at the top level
+
+- This means don't use hooks inside loops, conditions or nested functions they should always be called at the top lever of your functional components.
+  ![](https://i.ibb.co/HGxqS4D/2024-08-03-15-00-05-frontend-devlopment-React-interview-question-number-5-Is-it-useful-Let-me.png)
+
+### 2. Only call hooks from React functions.
+
+- Hooks should only be called from react functional components or custom hooks don't call them from regular Javascript functions.
+
+```
+export default function useMyName(name) {
+  const [state, setState] = useState(value);
+
+  useEffect(() => {
+    // ...
+  });
+
+  return anyThing;
+}
+```
+
+3. Don't call hooks conditionall.
+
+- Hooks should always be called unconditionally at the top level of your component don't call them inside conditions because react relies on the order of hooks to properly manage state.
+  ![](https://i.ibb.co/3zTCDGT/2024-08-03-15-08-17-React-interview-question-number-5-Is-it-useful-Let-me-know-in-comments-Follow.png)
