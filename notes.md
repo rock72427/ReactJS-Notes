@@ -938,7 +938,7 @@ export default ClassComponent;
 - Managed within a component.
 - Used for managing internal component data.
 
-## Q2. Difference between classbased compnent and functionbased component?
+## Q2. Difference between Classbased component and Functionbased component?
 
 ### Functional
 
@@ -999,6 +999,15 @@ constructor(props) {
 
 ## Q3. Difference between controlled component and uncontrolled component?
 
+| Controlled component                                                   | Uncontrolled component                                                                                                                             |
+| ---------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| The parent component has held over the form data.                      | The DOM itself holds control over the data.                                                                                                        |
+| It does not maintain its internal state.                               | It maintains its internal state.                                                                                                                   |
+| It allows validation control.                                          | It does not allow validation control.                                                                                                              |
+| It stores the current value in the form of props.                      | It stores the current value using react ref.                                                                                                       |
+| It has better control over the form data.                              | It has limited control over the form data.                                                                                                         |
+| Predictable because the component handles the form data at every step. | Not predictable because form elements can lose their reference or may be changed/ affected by external sources during the lifecycle of components. |
+
 ## Q4. What is hooks in react and what are the rule of using a hook?
 
 - Hooks are the new feature introduced in the React 16.8 version.
@@ -1031,5 +1040,5 @@ export default function useMyName(name) {
 
 3. Don't call hooks conditionall.
 
-- Hooks should always be called unconditionally at the top level of your component don't call them inside conditions because react relies on the order of hooks to properly manage state.
+- Hooks should always be called unconditionally at the top level of your component don't call them inside conditions because react relies on the order of hooks to properly manage state.\
   ![](https://i.ibb.co/3zTCDGT/2024-08-03-15-08-17-React-interview-question-number-5-Is-it-useful-Let-me-know-in-comments-Follow.png)
