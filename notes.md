@@ -1042,3 +1042,68 @@ export default function useMyName(name) {
 
 - Hooks should always be called unconditionally at the top level of your component don't call them inside conditions because react relies on the order of hooks to properly manage state.\
   ![](https://i.ibb.co/3zTCDGT/2024-08-03-15-08-17-React-interview-question-number-5-Is-it-useful-Let-me-know-in-comments-Follow.png)
+
+![](https://i.ibb.co/MPzpCHS/2024-08-03-16-30-55-AI-Eraser.png)
+
+| Controlled Forms                                                                                 | Uncontrolled Forms                              |
+| ------------------------------------------------------------------------------------------------ | ----------------------------------------------- |
+| State is mandatory to controll the form                                                          | State is optional                               |
+| On time validation is possible                                                                   | On time validation is not possible              |
+| Not need to DOM reference to handle the input, with event object we can handel the input values. | Need the DOM reference to get the input values. |
+| State comments by the onChange handler of the inputs.                                            |                                                 |
+
+## useRef() hook
+
+- useRef() hook is create an object with current property, which is mutable but will not cause re-render.
+  OR
+- useRef() hook use to create a muteable object value which will not re-render the component.
+- useRef() hook prreserves (collects) the values of an JSX element.
+
+> import {useRef} from 'react';
+
+#### Example
+
+```
+const myRef = useRef(initalValue);
+console.log(myRef); // {current: initialValue}
+```
+
+#### Example: using to get DOM References
+
+```
+<tag ref={myRef}>Text</tag>
+```
+
+#### Example:
+
+```
+import React, { useRef } from 'react';
+
+function UncontrolledFunction() {
+  const data = useRef(0);
+  console.log(data);
+
+  const updateData = () => {
+    data.current = data.current + 10;
+    console.log(data);
+  };
+
+  const paraRef = useRef(null);
+  const changePara = () => {
+    console.log(paraRef);
+    paraRef.current.innerHTML = "React is the best UI library";
+  };
+
+  return (
+    <div>
+      <h1>useRef() hook</h1>
+      <h1>{data.current}</h1>
+      <button onClick={updateData}>Change data</button>
+      <p ref={paraRef}>JS is the best language</p>
+      <button onClick={changePara}>Change paragraph</button>
+    </div>
+  );
+}
+
+export default UncontrolledFunction;
+```
