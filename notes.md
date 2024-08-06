@@ -1153,3 +1153,56 @@ const Child = () => {
 
 export default Child;
 ```
+
+## Conditional Rendering
+
+- Displaying something on the UI according to some given condition is known as conditional rendering.
+- In react using 3 ways we can perform conditional rendering:
+
+1. Using Condition Statement(if, else,...)
+2. Using Ternary Operator
+3. Using Short Circuit Operator(logical Operators)
+
+- We cannot write if else statements inside JSX but we can write ternary operator ans short circuit operator to handle the condition inside JSX.
+
+#### App.jsx
+
+```
+import React from "react";
+import Child from "./Child";
+
+const App = () => {
+  return (
+    <>
+      <Child />
+    </>
+  );
+};
+
+export default App;
+```
+
+#### Child.jsx
+
+```
+import React, { useState } from "react";
+
+const Child = () => {
+  const [flag, setFlag] = useState(true);
+  const [number, setNumber] = useState(24);
+  return (
+    <>
+      <h1>This is child component</h1>
+      {flag ? (
+        <h1>All the best for olympic gold in hockey</h1>
+      ) : (
+        <h1>Better luck for next time</h1>
+      )}
+      {number % 2 == 0 && <h1>{number} is an even number</h1>}
+      {/* {number % 2 == 0 || <h1>{number} is an odd number</h1>} */}
+    </>
+  );
+};
+
+export default Child;
+```
