@@ -1,14 +1,12 @@
-import ControlledFunction from "./ControlledFunction";
-import "./App.css";
-import ControlledClass from "./ControlledClass";
-import Tasks from "./Tasks";
+import React from "react";
+import Child from "./Child";
 
 const App = () => {
   return (
-    <div>
-      {/* <ControlledFunction /> */}
-      <Tasks />
-    </div>
+    <>
+      <p>This is app component</p>
+      <Child />
+    </>
   );
 };
 

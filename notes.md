@@ -1107,3 +1107,49 @@ function UncontrolledFunction() {
 
 export default UncontrolledFunction;
 ```
+
+## React Fragments
+
+- React Fragments are use to prevent the creation of unwanted parent HTML elements in a react application.
+
+#### Syntax
+
+```
+<React.Fragment></React.Fragment>
+OR
+<></>
+```
+
+#### App.jsx
+
+```
+import React from "react";
+import Child from "./Child";
+
+const App = () => {
+  return (
+    <>
+      <p>This is app component</p>
+      <Child />
+    </>
+  );
+};
+
+export default App;
+```
+
+#### Child.jsx
+
+```
+import React from "react";
+
+const Child = () => {
+  return (
+    <React.Fragment>
+      <h1>This is child component</h1>
+    </React.Fragment>
+  );
+};
+
+export default Child;
+```
