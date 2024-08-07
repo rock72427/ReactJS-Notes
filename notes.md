@@ -1206,3 +1206,222 @@ const Child = () => {
 
 export default Child;
 ```
+
+```
+import React, { useState } from "react";
+
+function Task1() {
+  const [flag, setFlag] = useState(true);
+  function handelColor() {
+    setFlag(!flag);
+  }
+  return (
+    <>
+      <div
+        style={{
+          height: "200px",
+          width: "500px",
+          textAlign: "center",
+          alignContent: "center",
+          border: "2px solid black",
+          background: flag ? "blue" : "red",
+        }}
+      >
+        <button onClick={handelColor}>{flag ? "red" : "blue"}</button>
+      </div>
+    </>
+  );
+}
+export default Task1;
+```
+
+```
+import React, { useState } from "react";
+
+function Task2() {
+  const [count, setCount] = useState(0);
+
+  const checkPrime = (number) => {
+    if (number < 0) return false; // Add this check for negative numbers
+    if (number <= 1) return false;
+    if (number === 2) return true;
+    if (number % 2 === 0) return false;
+    let flag = true;
+    for (let i = 3; i <= Math.sqrt(number); i++) {
+      if (number % i === 0) {
+        flag = false;
+        return flag;
+      }
+    }
+    return flag;
+  };
+
+  return (
+    <>
+      <div>
+        <button onClick={() => setCount(count + 1)}>+</button>
+        <b>{count}</b>
+        <button onClick={() => setCount(count - 1)}>-</button>
+      </div>
+      <div>
+        {count > 0 ? (
+          count % 2 === 0 ? (
+            <h1>{count} is even</h1>
+          ) : (
+            <h1>{count} is odd</h1>
+          )
+        ) : count < 0 ? (
+          <h1>{count} is negative</h1>
+        ) : (
+          <h1>{count} is zero</h1>
+        )}
+      </div>
+      <div>{checkPrime(count) && <h1>{count} is a prime number</h1>}</div>
+    </>
+  );
+}
+
+export default Task2;
+```
+
+#### ControlledFunction.jsx
+
+```
+import React, { useState } from "react";
+
+const ControlledFunction = () => {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [usernameError, setUsernameError] = useState("");
+  function usernameHandle(event) {
+    let value = event.target.value;
+    console.log(value);
+    if (value.length < 6) {
+      setUsernameError("is too short");
+    } else {
+      setUsernameError("");
+    }
+    setUsername(value);
+  }
+  const submitHandler = (event) => {
+    event.preventDefault();
+    if (!username || !password) {
+      alert("Please fill in all fields");
+    } else if (usernameError) {
+      alert("provide correct input");
+    } else {
+      console.log(username, password);
+      setUsername("");
+      setPassword("");
+    }
+  };
+  return (
+    <div>
+      <h1>ControlledFunction</h1>
+      <div className="container w-50">
+        <form className="form" onSubmit={submitHandler}>
+          <div className="input-group">
+            <label htmlFor="">
+              Username <span style={{ color: "red" }}>{usernameError}</span>
+            </label>
+            <input
+              type="text"
+              id="username"
+              onChange={usernameHandle}
+              className="input-control"
+              value={username}
+            />
+          </div>
+          <div className="input-group">
+            <label htmlFor="">Password</label>
+            <input
+              type="password"
+              className="input-control"
+              onChange={(event) => setPassword(event.target.value)}
+              value={password}
+            />
+          </div>
+          <div className="input-group">
+            <button className="btn btn-dark">Submit</button>
+          </div>
+        </form>
+      </div>
+      <div className="container w-50">
+        <h1>Username: {username}</h1> <h1>Password: {password}</h1>
+      </div>
+    </div>
+  );
+};
+
+export default ControlledFunction;
+```
+
+#### ControlledClass.jsx
+
+```
+import React, { Component } from "react";
+
+class ControlledClass extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      username: "",
+      password: "",
+      usernameError: "",
+    };
+  }
+
+  usernameHandle = (event) => {
+    let value = event.target.value;
+    if (value.length < 6) {
+      this.setState({ usernameError: "Username is too short" });
+    } else {
+      this.setState({ usernameError: "" });
+    }
+    this.setState({ username: value });
+  };
+
+  handlePasswordChange = (event) => {
+    this.setState({ password: event.target.value });
+  };
+
+  render() {
+    return (
+      <div>
+        <h1>ControlledClass</h1>
+        <div className="container">
+          <form className="form">
+            <div className="input-group">
+              <label htmlFor="">Username</label>
+              <input
+                type="text"
+                id="username"
+                onChange={this.usernameHandle}
+                className="input-control"
+              />
+            </div>
+            <span style={{ color: "red" }}>{this.state.usernameError}</span>
+            <div className="input-group">
+              <label htmlFor="">Password</label>
+              <input
+                className="input-control"
+                type="password"
+                onChange={this.handlePasswordChange}
+              />
+            </div>
+            <div className="input-group">
+              <button className="btn btn-dark">Submit</button>
+            </div>
+          </form>
+        </div>
+        <div className="container">
+          <h1>Username: {this.state.username}</h1>
+          <h1>Password: {this.state.password}</h1>
+        </div>
+      </div>
+    );
+  }
+}
+
+export default ControlledClass;
+```
