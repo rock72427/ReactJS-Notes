@@ -1206,3 +1206,40 @@ const Child = () => {
 
 export default Child;
 ```
+
+## Context API
+
+- React context API is a way for React Application to efficiently produce global variable which can be pass to any component inside the application.
+- It is very lightweight and easy to handle global states.
+- Context API use to avoid props drilling inside a react application.
+- Context API is a feature of react library for global state management.
+- To create a context variable we have to use React.createContext() inbuild method.
+- The context variable is connected to the root component with a provider function along with value attribute.
+
+#### Creating
+
+```
+import React from 'react';
+
+const count = React.createContext();
+
+export default countContext
+```
+
+#### Providing (root)
+
+```
+<count.Provider value={data}>
+  // All Component
+</count.Provider>
+```
+
+- To use the context variable in child component we have to use a hook `useContext()`.
+
+#### Consuming
+
+```
+import {useContext} from 'react';
+
+const data = useContext(count)
+```
