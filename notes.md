@@ -1209,6 +1209,8 @@ export default Child;
 
 ## Context API
 
+![](https://i.ibb.co/XDbzgMj/2024-08-08-16-22-18-AI-Eraser.png)
+
 - React context API is a way for React Application to efficiently produce global variable which can be pass to any component inside the application.
 - It is very lightweight and easy to handle global states.
 - Context API use to avoid props drilling inside a react application.
@@ -1242,4 +1244,46 @@ export default countContext
 import {useContext} from 'react';
 
 const data = useContext(count)
+```
+
+## Creating a react app using vite Plugin
+
+### Step-1
+
+```
+npm create vite@latest
+```
+
+### Step-2
+
+give the project name `myapp`
+
+### Step-3
+
+Select the Framework/app `react`
+
+### Step-4
+
+Select the varient/script `javascript`
+
+### Step-5
+
+```
+cd myapp
+```
+
+### Step-6
+
+install the node_modules folder
+
+```
+npm install
+```
+
+### Step-7
+
+run the app
+
+```
+npm run dev
 ```
