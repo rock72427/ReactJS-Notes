@@ -2,7 +2,7 @@ import { createContext, useContext, useState } from "react";
 
 const colorContext = createContext();
 
-const ColorContextWrapper = (props) => {
+export const ColorContextWrapper = (props) => {
   const [color, setColor] = useState("green");
   return (
     <colorContext.Provider value={{ color, setColor }}>
