@@ -1287,3 +1287,111 @@ run the app
 ```
 npm run dev
 ```
+
+- React Library doesn't provide any inbuilt property or method to perform page routing in a react application.
+- To create routing inside a react application we have to depend on some third party libraries, `react-router-dom` is the most famous routing library for react application.
+- To install
+
+```
+npm install react-router-dom
+```
+
+- The current version of `react-router-dom` is version 6.
+- It provides some inbuilt components and methods to create a routing in a application.
+- To use
+
+```
+import { BrowserRouter, Routes, Route } from "react-router-dom
+```
+
+#### Syntax
+
+```
+<BrowserRouter>
+  <Routes>
+    <Route path="/" element={</>} >
+    .
+    .
+    .
+  </Routes>
+</BrowserRouter>
+```
+
+### BrowserRouter
+
+- It is the parent of every component inside the application.
+
+### Routes
+
+- It is use to hold a group of routing pages, there can be multiple number of routes in one application.
+
+### Route
+
+- It is use to provide individual page routing for a given endpoint.
+- Route component takes path and element attribute where path is use to define the endpoint of url and element attribute use to show and component in that particular path.
+
+### Link
+
+#### Syntax
+
+```
+<Link to="/></Link>
+```
+
+- to: String or object that specifies the pathname.
+- replace: Replaces the pathname in the history stack with new.
+- innerRef: Passes ref to the element rendered by the component.
+
+### NavLink
+
+- to, replace, innerRef same as the Link Component.
+- className: Specifies the CSS class name you want to apply to the element when active.
+- isActive: Returns boolean value whether the link is active or not.
+- style: To apply inline CSS.
+- end: Match the pathname precisely with the URL.
+
+# Interview Question
+
+# 1. Why we cannot use anchor tag for routing in react application?
+
+# 2. What is the difference between link and navlink component in react-router-dom?
+
+# 3. How to navigate from one page to another page?
+
+# 4. What is outline component in reacter?
+
+## Virtual DOM
+
+![Virtual DOM](https://i.ibb.co/jDt8bTG/2024-08-14-16-56-23-AI-Eraser.png)
+
+- The DOM which is created by browsers known as Browser DOM or real DOM.
+- The DOM which is manage by react DOM library known as react DOM or virtual DOM
+- Virtual DOM is a lightweight copy of borwser DOM which manages every DOM manupulation inside a react application.
+- Virtual DOM improves the performance of a react application.
+- When a react application starts and initialize in the browser DOM the react DOM library takes a copy of the browser DOM which is known as initial virtal DOM.
+
+## Reconciliation Process
+
+- Reconciliation is the process where the react DOM library get synchronise with the browser DOM to update it.
+- If there is any changes in states or props value react DOM library creates a new virtual DOM with the updated component tree structure, then it compares new virtual DOM with the old virtual DOM to identifying the change in the DOM trees.
+- If any changes found in the new virtual DOM after the comparision process the new virtual DOM replace the old virtual DOM and browser DOM get updates with those changes.
+- If there is no changes found then the react DOM library delete the new virtual DOM and does not update the browser DOM this process of comparision between two virtual DOM and updating the browser DOM is known as `Reconciliation Process`
+
+## Diffing Algorithm
+
+- The algorithm which is used by react DOM library to compare between two virtual DOM is called as `Diffing Algorithm`.
+
+# Q1. What is React Fiber
+
+## Multipage App
+
+![Multipage App](https://i.ibb.co/FKgRr60/2024-08-14-17-34-18-AI-Eraser.png)
+
+## Single Page App (SPA)
+
+![Single Page App](https://i.ibb.co/YWT9LVQ/2024-08-14-17-37-23-AI-Eraser.png)
+
+- The Single Page Application is a web app implementation where a web application only loads a single document and updates its body content without changing that document.
+- Single Page Application are handle by the javascript api's such as ajax, httpXML request and fetch to perform the request to the server and get a json response as return.
+- Single Page Application loads the content without any page refresh.
+- We can create Single Page Application using javascript libraries or framework like reactjs, angularjs, vuejs and nextjs etc.
