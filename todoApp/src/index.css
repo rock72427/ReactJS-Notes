@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(61, 60, 60);
+}
+.inputs {
+  background-color: rgb(18, 18, 155);
+  height: 15vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+.inputs > input {
+  flex-grow: 1;
+  height: 50px;
+  font-size: 40px;
+  outline: none;
+  border: none;
+}
+.inputs > input::placeholder {
+  text-align: center;
+  color: red;
+}
+.inputs > button {
+  padding: 10px 20px;
+  background-color: green;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.tasks {
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 30px;
+}
+.task {
+  display: flex;
+  /* height: 150px; */
+  width: 250px;
+  background-color: rgb(202, 138, 19);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+.task > h4 {
+  color: white;
+  height: 100%;
+  flex-grow: 1;
+}
+.task > .buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: space-around;
+}
+.task > .buttons > button {
+  padding: 5px 8px;
+}
