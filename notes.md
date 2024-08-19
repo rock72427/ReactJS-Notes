@@ -1395,3 +1395,104 @@ import { BrowserRouter, Routes, Route } from "react-router-dom
 - Single Page Application are handle by the javascript api's such as ajax, httpXML request and fetch to perform the request to the server and get a json response as return.
 - Single Page Application loads the content without any page refresh.
 - We can create Single Page Application using javascript libraries or framework like reactjs, angularjs, vuejs and nextjs etc.
+
+## React Lifecycle
+
+- React Lifecycle is defined as the series of methods that are invoked in different stages of the component's existence.
+- React component can go through 4 main phases as its life cycle.
+
+1. Initialization phases
+2. Mounting phases
+3. Updating phases
+4. Unmounting phases
+
+![React lifecycle](https://disolutions.net/_next/static/media/blog_105.cc3faa63.webp)
+
+### 1. Initialization phases
+
+- The creation of variables, state, props and functions inside a component known as initialization phases.
+- This is done by the constructor of a component.
+
+### 2. Mounting phases
+
+- In this phases the return jsx of a component are mounted in the DOM.
+
+### 3. Updating phases
+
+- Updatting phases occur when a components states or props are changed.
+
+### 4. Unmounting phases
+
+- This is last phases of a components life cycle this phases refers to the life cycle stage of a component is being removed from the DOM.
+
+## Lifecycle Method in a Classbased Component
+
+- All the method of lifecycle phases are predefined inside a class based component.
+
+### 1. Mounting Phase
+
+1. constructor()
+2. static getDerivedStateFormProps()
+3. render()
+4. \*componentDidMount()
+
+### 2. Updating Phase
+
+1. static getDerivedStateFromProps()
+2. shouldComponentUpdate()
+3. render()
+4. getSnapshotBeforeUpdate()
+5. \*\*componentDidUpdate()
+
+### 3. Unmounting Phase
+
+1. \*\*componentWillUnmount()
+
+### 4. Error Bounding
+
+1. static getDerivedStateFromError()
+2. componentDidCatch()
+
+## LifeCycle Method in a Function Based Component
+
+- There a no predefined methods to handle the lifecycle phases of a function based component.
+- To achieve the lifecycle phases in a functional component we are using a hook `useEffect()`.
+
+`import { useEffect } from 'react';`
+
+## useEffect() hook
+
+- `useEffect()` hook tells the component what to do after renders.
+- This hook use to handle side effects in a function based component(side effects are like data fetching, using timer function, manually changing the DOM and using some UI animation etc.)
+- Using `useEffect()` we can get the lifecycle phases in a function based component.
+- Example:- mounting, updating, unmounting phases.
+
+#### Syntax
+
+```
+1. useEffect(() => {
+  // executes after every render
+})
+
+```
+
+```
+2. useEffect(() => { (ComponentDidMount())
+  // executes For once after the inital render
+}, [])
+```
+
+```
+3. useEffect(() => { (componentDidUpdate())
+  // executes after the dependent State/props change
+}, [state, props])
+```
+
+```
+4. useEffect(() => { (componentWillUnmount())
+  // executes after the returned function
+  return () => { (cleanup Function)
+    // executes before the useEffect function
+  }
+})
+```
