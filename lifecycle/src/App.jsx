@@ -4,6 +4,11 @@ import UseEffect from "./UseEffect";
 import Example1 from "./Example1";
 import Example2 from "./Example2";
 import Example3 from "./Example3";
+import Example4 from "./Example4";
+import Example5 from "./Example5";
+import Example6 from "./Example6";
+import Todo from "./Todo";
+import InputGenerator from "./InputGenerator";
 
 const App = () => {
   const [flag, setFlag] = useState(true);
@@ -16,7 +21,12 @@ const App = () => {
       {/* <UseEffect /> */}
       {/* <Example1 /> */}
       {/* <Example2 /> */}
-      <Example3 />
+      {/* <Example3 /> */}
+      {/* <Example4 /> */}
+      {/* <Example5 /> */}
+      {/* <Example6 /> */}
+      {/* <Todo /> */}
+      <InputGenerator />
     </div>
   );
 };

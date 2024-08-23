@@ -306,7 +306,7 @@ export default Third
 - Props is an inbuild object inside react components.
 - Props are the data which send from a parent component to child component.
 - Props are send in a similar way like function arguments (or) HTML attributes
-- Props are immutable as they are the data recieved from parent component.
+- Props are immutable within a component. They are the data received from a parent component and should not be modified directly by the child component.
 - Props are passed as a key-value pair.
 
 #### Example
