@@ -427,7 +427,7 @@ export default First;
 ## Children Props
 
 - The data (or) information which passed in between the component opening and closing tags is called as children props.
-- That data implicitly added to a properly named as children inside the props object.
+- Data passed as children to a component is available within the props object under the children property.
 
 #### Example
 
