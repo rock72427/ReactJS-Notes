@@ -9,6 +9,9 @@ import Example5 from "./Example5";
 import Example6 from "./Example6";
 import Todo from "./Todo";
 import InputGenerator from "./InputGenerator";
+import Axios from "./Axios";
+import "./App.css";
+import Tmp from "./Tmp";
 
 const App = () => {
   const [flag, setFlag] = useState(true);
@@ -26,7 +29,9 @@ const App = () => {
       {/* <Example5 /> */}
       {/* <Example6 /> */}
       {/* <Todo /> */}
-      <InputGenerator />
+      {/* <InputGenerator /> */}
+      {/* <Axios /> */}
+      <Tmp />
     </div>
   );
 };

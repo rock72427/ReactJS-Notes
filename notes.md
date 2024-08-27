@@ -1496,3 +1496,154 @@ import { BrowserRouter, Routes, Route } from "react-router-dom
   }
 })
 ```
+
+## Axios
+
+- Axios is a popular javascript API library used to perform HTTP requests to the servers from web-browser or nodejs application.
+- It is a third party Promise based API library.
+- Axios is light-weight & more feature oriented then the fetch API.
+- Axios handle the JSON response automatically (no need of .json() method)
+
+#### Install
+
+```
+npm i axios
+```
+
+#### Use
+
+```
+import axios from "axios"
+```
+
+#### Syntax
+
+```
+axios.method("url)
+
+// method=> get/post/put/patch/delete ...etc
+```
+
+#### Example
+
+```
+axios.get("http://myserver.com").then(data =>
+console.log(data).catch(error => console.log(error)))
+```
+
+# Q1. What is the difference between fetch and axios
+
+### `fetch`
+
+1. **Built-In Browser API**: `fetch` is a built-in browser API, which means you don’t need to install any additional libraries to use it. It’s available in modern browsers out of the box.
+
+2. **Promise-Based**: `fetch` uses Promises, which allows for a more modern approach to handling asynchronous code. However, it doesn’t reject the Promise on HTTP error statuses (like 404 or 500); instead, it resolves the Promise normally, requiring additional checks for response status.
+
+3. **No Interceptors**: `fetch` doesn’t support interceptors out of the box. If you need to modify requests or responses globally, you would need to implement custom logic or use middleware.
+
+4. **Stream API**: `fetch` supports the Stream API, allowing you to handle response bodies as a stream. This can be useful for processing large amounts of data or handling real-time updates.
+
+5. **Configuration Complexity**: `fetch` requires more manual configuration for tasks like setting headers, transforming requests and responses, and handling timeouts. This can lead to more verbose code compared to some libraries.
+
+### `axios`
+
+1. **Third-Party Library**: `axios` is a third-party library that needs to be installed separately. It’s not built into the browser but can be used in both browser and Node.js environments.
+
+2. **Promise-Based with Error Handling**: `axios` also uses Promises but will reject them for HTTP error statuses (like 404 or 500), making error handling simpler. You can catch errors more straightforwardly using `.catch()`.
+
+3. **Interceptors**: `axios` supports request and response interceptors, allowing you to modify requests or responses before they are handled by `.then()` or `.catch()`. This is useful for adding authentication tokens or logging.
+
+4. **Automatic JSON Data Transformation**: `axios` automatically transforms JSON data into JavaScript objects and vice versa, which can simplify working with APIs that use JSON.
+
+5. **Convenient Defaults**: `axios` provides default settings and allows you to configure global settings, such as base URLs, headers, and timeouts. This can reduce the amount of configuration needed in individual requests.
+
+## useReducer() hook
+
+- `useReducer()` hook is similar to `useState()` hook used for managing a state in a function based component.
+- `useReducer()` hook use to manage complex state changing logic in a component.
+- Instead of providing a set state function like `useState()` hook `useReducer()` hook take a custom state changing function logic to handle the state updation.
+
+#### Syntax
+
+```
+import { useReducer } from 'react';
+
+const [state, dispatch] = useReducer(reducer, initailValue, initialfunction);
+
+// state => inital value
+// dispatch => function to update the state by providing the action object
+// reducer => custom state changing function Ref
+// initialValue => the inital value of the state
+// initialfunction => optional(used to lazily load the state)
+```
+
+- `useReduder()` hook takes three argument:
+
+1. reducer function
+2. inital value for the state
+3. initialization function (optional)
+
+### reducer function
+
+- It returns an array of two elements:
+
+1. state value
+2. dispatch function
+
+- which use to invoke the reducer function with a action argument.
+- Reducer function is a pure function which always returns a updated state according to the user action.
+- Reducer function has two parameter state and action, state refers to the initial value and action accept an object with type and payload properties.
+
+## useMemo()
+
+#### Syntax
+
+```
+import {useMemo} from 'react';
+```
+
+#### use
+
+```
+let result = useMemo(() => {
+  // Statement
+  return value
+}, [state/props])
+
+// return => Memoized Value (the returned value)
+// [state/props] => dependencies
+```
+
+## useCallback()
+
+#### Syntax
+
+```
+import {useCallback} from "react"
+```
+
+#### use
+
+```
+let result = useCallback(() => {
+  // Statement
+}, [state/props])
+
+// return => Memoized function (the reference of Callback function)
+// [state/props] => dependencies
+```
+
+- `useMemo()` and `useCallback()` hooks are used as a browser optimization tools.
+- Both hooks are used for preventing unnecessary operation, calculation and function calling inside a react function based component.
+- These hooks are taking 2 argument:
+
+  1. callback function
+  2. dependencies array of a state or props value.
+
+- The callback function execute whenever any of the dependencies changed.
+- `useMemo()` hook return a memoized value while `useCallback()` hook return a memoized function.
+- `useMemo()` prevents unnecessary value calculation in each render and `useCallback()` prevents unnecessary function creation in each render of a component.
+
+# Q1. What is the difference between useMemo() and useCallback() hook
+
+# Q2. How these hook are different from useEffect hook
