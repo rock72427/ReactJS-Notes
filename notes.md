@@ -1647,3 +1647,10 @@ let result = useCallback(() => {
 # Q1. What is the difference between useMemo() and useCallback() hook
 
 # Q2. How these hook are different from useEffect hook
+
+## React Higher Order Component
+
+- In React, a higher-order component is a function that takes a component as an argument and returns a new component that wraps the original component.
+- Higher order component allows us to add additional functionality to a component without modifying the components JSX.
+- Higher order component are used for re-use a components code multiple times across the react application.
+- HOC are mostly use for authentication or routing capabilites to a component or to apply a specific style or behaviour to mutliple components.

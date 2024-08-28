@@ -1,19 +1,8 @@
-import React, { useRef } from "react";
+import React, { useState } from "react";
 
 const Tmp = () => {
-  const refElement = useRef();
-  console.log(refElement);
-  const handleClick = () => {
-    refElement.current.style.color = "red";
-    refElement.current.innerHTML = "Hello Wolrd";
-  };
-  return (
-    <div>
-      <input ref={refElement} type="text" />
-      <button onClick={handleClick}>Click</button>
-      <p ref={refElement}></p>
-    </div>
-  );
+  const [tmp, setTmp] = useState(true);
+  return <div>{tmp && <h1>Hello World</h1>}</div>;
 };
 
 export default Tmp;
