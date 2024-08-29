@@ -508,7 +508,7 @@ Here are the key differences between libraries and frameworks:
 
 ## Props Drilling
 
-![props drilling](https://i.ibb.co/1ryK8Kj/2024-07-31-16-31-20-AI-Eraser.png)
+<img src="https://i.ibb.co/1ryK8Kj/2024-07-31-16-31-20-AI-Eraser.png" style="width: 700px">
 
 - Sending the data from top most parent component to least most child component as a props known as props drilling.
 
@@ -1019,8 +1019,8 @@ constructor(props) {
 
 ### 1. Only use hooks at the top level
 
-- This means don't use hooks inside loops, conditions or nested functions they should always be called at the top lever of your functional components.
-  ![](https://i.ibb.co/HGxqS4D/2024-08-03-15-00-05-frontend-devlopment-React-interview-question-number-5-Is-it-useful-Let-me.png)
+- This means don't use hooks inside loops, conditions or nested functions they should always be called at the top lever of your functional components.\
+  <img src="https://i.ibb.co/HGxqS4D/2024-08-03-15-00-05-frontend-devlopment-React-interview-question-number-5-Is-it-useful-Let-me.png" style="width: 700px">
 
 ### 2. Only call hooks from React functions.
 
@@ -1041,9 +1041,8 @@ export default function useMyName(name) {
 3. Don't call hooks conditionall.
 
 - Hooks should always be called unconditionally at the top level of your component don't call them inside conditions because react relies on the order of hooks to properly manage state.\
-  ![](https://i.ibb.co/3zTCDGT/2024-08-03-15-08-17-React-interview-question-number-5-Is-it-useful-Let-me-know-in-comments-Follow.png)
-
-![](https://i.ibb.co/MPzpCHS/2024-08-03-16-30-55-AI-Eraser.png)
+   <img src="https://i.ibb.co/3zTCDGT/2024-08-03-15-08-17-React-interview-question-number-5-Is-it-useful-Let-me-know-in-comments-Follow.png" style="width: 400px">\
+  <img src="https://i.ibb.co/MPzpCHS/2024-08-03-16-30-55-AI-Eraser.png" style="width: 700px">
 
 | Controlled Forms                                                                                 | Uncontrolled Forms                              |
 | ------------------------------------------------------------------------------------------------ | ----------------------------------------------- |
@@ -1209,7 +1208,7 @@ export default Child;
 
 ## Context API
 
-![](https://i.ibb.co/XDbzgMj/2024-08-08-16-22-18-AI-Eraser.png)
+<img src="https://i.ibb.co/XDbzgMj/2024-08-08-16-22-18-AI-Eraser.png" style="width: 700px">
 
 - React context API is a way for React Application to efficiently produce global variable which can be pass to any component inside the application.
 - It is very lightweight and easy to handle global states.
@@ -1362,7 +1361,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom
 
 ## Virtual DOM
 
-![Virtual DOM](https://i.ibb.co/jDt8bTG/2024-08-14-16-56-23-AI-Eraser.png)
+<img src="https://i.ibb.co/jDt8bTG/2024-08-14-16-56-23-AI-Eraser.png" style="width: 700px">
 
 - The DOM which is created by browsers known as Browser DOM or real DOM.
 - The DOM which is manage by react DOM library known as react DOM or virtual DOM
@@ -1385,11 +1384,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom
 
 ## Multipage App
 
-![Multipage App](https://i.ibb.co/FKgRr60/2024-08-14-17-34-18-AI-Eraser.png)
+<img src="https://i.ibb.co/FKgRr60/2024-08-14-17-34-18-AI-Eraser.png" style="width: 700px">
 
 ## Single Page App (SPA)
 
-![Single Page App](https://i.ibb.co/YWT9LVQ/2024-08-14-17-37-23-AI-Eraser.png)
+<img src="https://i.ibb.co/YWT9LVQ/2024-08-14-17-37-23-AI-Eraser.png" style="width: 700px">
 
 - The Single Page Application is a web app implementation where a web application only loads a single document and updates its body content without changing that document.
 - Single Page Application are handle by the javascript api's such as ajax, httpXML request and fetch to perform the request to the server and get a json response as return.
@@ -1406,7 +1405,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom
 3. Updating phases
 4. Unmounting phases
 
-![React lifecycle](https://disolutions.net/_next/static/media/blog_105.cc3faa63.webp)
+<img src="https://disolutions.net/_next/static/media/blog_105.cc3faa63.webp" style="width: 700px">
 
 ### 1. Initialization phases
 
@@ -1657,6 +1656,6 @@ let result = useCallback(() => {
 
 # Redux
 
-<img src="https://i.ibb.co/ncgMVg5/2024-08-29-16-33-01-AI-Eraser.png" style="width: 500px">\
-<img src="https://i.ibb.co/4JLvYCF/2024-08-29-16-44-34-AI-Eraser.png" style="width: 500px">\
-<img src="https://redux.js.org/assets/images/ReduxDataFlowDiagram-49fa8c3968371d9ef6f2a1486bd40a26.gif" style="width: 500px">
+<img src="https://i.ibb.co/ncgMVg5/2024-08-29-16-33-01-AI-Eraser.png" style="width: 700px">\
+<img src="https://i.ibb.co/4JLvYCF/2024-08-29-16-44-34-AI-Eraser.png" style="width: 700px">\
+<img src="https://redux.js.org/assets/images/ReduxDataFlowDiagram-49fa8c3968371d9ef6f2a1486bd40a26.gif" style="width: 700px">
