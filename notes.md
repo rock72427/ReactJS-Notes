@@ -1657,6 +1657,6 @@ let result = useCallback(() => {
 
 # Redux
 
-![react-redux](https://i.ibb.co/ncgMVg5/2024-08-29-16-33-01-AI-Eraser.png)
-![](https://i.ibb.co/4JLvYCF/2024-08-29-16-44-34-AI-Eraser.png)
-![](https://redux.js.org/assets/images/ReduxDataFlowDiagram-49fa8c3968371d9ef6f2a1486bd40a26.gif)
+<img src="https://i.ibb.co/ncgMVg5/2024-08-29-16-33-01-AI-Eraser.png" style="width: 500px">\
+<img src="https://i.ibb.co/4JLvYCF/2024-08-29-16-44-34-AI-Eraser.png" style="width: 500px">\
+<img src="https://redux.js.org/assets/images/ReduxDataFlowDiagram-49fa8c3968371d9ef6f2a1486bd40a26.gif" style="width: 500px">
