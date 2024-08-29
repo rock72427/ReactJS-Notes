@@ -1654,3 +1654,9 @@ let result = useCallback(() => {
 - Higher order component allows us to add additional functionality to a component without modifying the components JSX.
 - Higher order component are used for re-use a components code multiple times across the react application.
 - HOC are mostly use for authentication or routing capabilites to a component or to apply a specific style or behaviour to mutliple components.
+
+# Redux
+
+![react-redux](https://i.ibb.co/ncgMVg5/2024-08-29-16-33-01-AI-Eraser.png)
+![](https://i.ibb.co/4JLvYCF/2024-08-29-16-44-34-AI-Eraser.png)
+![](https://redux.js.org/assets/images/ReduxDataFlowDiagram-49fa8c3968371d9ef6f2a1486bd40a26.gif)
