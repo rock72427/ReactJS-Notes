@@ -1659,3 +1659,70 @@ let result = useCallback(() => {
 <img src="https://i.ibb.co/ncgMVg5/2024-08-29-16-33-01-AI-Eraser.png" style="width: 700px">\
 <img src="https://i.ibb.co/4JLvYCF/2024-08-29-16-44-34-AI-Eraser.png" style="width: 700px">\
 <img src="https://redux.js.org/assets/images/ReduxDataFlowDiagram-49fa8c3968371d9ef6f2a1486bd40a26.gif" style="width: 700px">
+
+- Redux is a javascript open source library use to manage a global state in javascript application.
+- Redux is a third party global state management library which solves the problem of prop drilling by efficiently passing a global state to the components of a react application.
+- It is very usefull for large application where we have to manage bigger data and complex state change logics.
+- To use the redux in a react application we have to use another library react-redux.
+
+#### Installation
+
+```
+npm install redux
+npm install react-redux
+```
+
+```
+npm i redux react-redux
+```
+
+- Redux file have three primary component
+  1. action
+  2. reducer
+  3. store
+
+### Action
+
+- Action is a plain javascript object with type and payload properties which defines the actions or events occur in the react application.
+- Type property use for declaring the type of event and payload property use to get some information or data in that particular event.
+
+### Reducer
+
+- A reducer is a pure fuction which always returns the updated state according to the action type.
+- A reducer function has 2 parameters:
+  1. state
+  2. action
+  - State receive the initalvalue and action object describes how to update the state.
+
+### Store
+
+- Store is the place where every global state of the application stores.
+- Store is like a brain of our application which responsible for every changes for the state of the application.
+- To create a store we are using a predefined function `legacy-create-store` from redux library.
+- Store is connected to the root component of the react application by provider function from `react-redux` library.
+
+```
+import { Provider } from "react-redux"
+```
+
+#### Syntax
+
+```
+<Provider store={Ref of Store}>
+  // all Component
+</Provider>
+```
+
+- To use a redux state inside a component we a using `useSelector()` hook and to modify a state we use `useDispatch()` hook from `react-redux` library.
+
+```
+import { useSelector, useDispatch } from "react-redux"
+```
+
+#### Syntax
+
+```
+const state = useSelector((store) => store.reducer)
+const dispatch = useDispatch()
+dispatch(Action)
+```
